@@ -5,3 +5,7 @@ before_install:
   - docker build -t multi_client:mh10445 -f Dockerfile.dev .
 script:
   - docker run -e CI=true multi_client:mh10445 npm run test -- --coverage
+after_success:
+  - docker build -t multi_client:mh10445 .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push multi_client:mh10445

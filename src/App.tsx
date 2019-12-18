@@ -13,7 +13,7 @@ class App extends Component<AppComponentProps, AppComponentState> {
   render(): JSX.Element {
     return (
       <div className="App">
-        <p className="Apptext">App</p>
+        <p className="Apptext">App Component Changed</p>
       </div>
     );
   }

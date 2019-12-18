@@ -11,6 +11,6 @@ describe("Render App Component", () => {
   });
 
   it("App Component Text", () => {
-    expect(appComponent.find(".Apptext").text()).toBe("App");
+    expect(appComponent.find(".Apptext").text()).toBe("App Component Changed");
   });
 });

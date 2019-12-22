@@ -11,6 +11,8 @@ describe("Render App Component", () => {
   });
 
   it("App Component Text", () => {
-    expect(appComponent.find(".Apptext").text()).toBe("App Component Changed");
+    expect(appComponent.find(".Apptext").text()).toBe(
+      "App Component New Deployment Changed"
+    );
   });
 });
